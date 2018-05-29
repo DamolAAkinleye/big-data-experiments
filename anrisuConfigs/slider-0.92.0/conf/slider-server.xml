@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!--
+  This is an optional configuration file.
+
+  Properties set here are picked up in the slider Application Master, 
+  supplementing configuration options in core-site.xml and yarn-site.xml.
+  
+  These options are NOT read in the client
+-->
+<configuration>
+
+
+  <!--
+    <property>
+      <name>slider.metrics.ganglia.enabled</name>
+      <value>true</value>
+      <description>Boolean to enable Ganglia metrics reporting</description>
+    </property>
+
+    <property>
+      <name>slider.metrics.ganglia.host</name>
+      <value>localhost</value>
+      <description>Ganglia hostname</description>
+    </property>
+    
+    <property>
+      <name>slider.metrics.ganglia.port</name>
+      <value>8649</value>
+      <description>Ganglia port</description>
+    </property>
+    
+    <property>
+      <name>slider.metrics.ganglia.version-31</name>
+      <value>true</value>
+      <description>protocol version true=v3.1, false=v3.0</description>
+    </property>
+  -->
+
+  <!--
+  Options to enable metrics to slf4j
+  
+  <property>
+    <name>slider.metrics.logging.enabled</name>
+    <value>true</value>
+    <description>Boolean to enable SL4J metrics reporting at
+    scheduled intervals</description>
+  </property>
+
+
+  <property>
+    <name>slider.metrics.logging.log.name</name>
+    <value>org.apache.slider.metrics.log</value>
+    <description>name of log</description>
+  </property>
+  
+  -->
+
+</configuration>

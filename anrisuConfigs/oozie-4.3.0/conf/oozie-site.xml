@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<configuration>
+<property>
+        <name>oozie.service.HadoopAccessorService.hadoop.configurations</name>
+        <value>*=/usr/local/hadoop-2.7.3/etc/hadoop/</value>
+        <description>The HADOOP_CONF_DIR contains the relevant Hadoop *-site.xml files 
+           if oozie installed along with hadoop. Else relative path to the jar file
+        </description>
+</property>
+<property>
+        <name>oozie.service.ProxyUserService.proxyuser.#USER#.hosts</name>
+        <value>*</value>
+        <description>
+            List of hosts the '#USER#' user is allowed to perform 'doAs'
+            operations.
+        </description>
+</property>
+<property>
+        <name>oozie.service.ProxyUserService.proxyuser.#USER#.groups</name>
+        <value>*</value>
+        <description>
+            List of groups the '#USER#' user is allowed to impersonate users
+            from to perform 'doAs' operations.
+        </description>
+</property>
+<property>
+	 <name>oozie.service.JPAService.jdbc.driver</name>
+ 	 <value>com.mysql.jdbc.Driver</value>
+ 	 <description>JDBC driver class</description>
+</property>
+<property>
+ 	 <name>oozie.service.JPAService.jdbc.url</name>
+ 	 <value>jdbc:mysql://localhost:3306/oozie?createDatabaseIfNotExist=true</value>
+ 	 <description>JDBC URL</description>
+</property>
+<property>
+  	<name>oozie.service.JPAService.jdbc.username</name>
+  	<value>oozie</value>
+ 	 <description>DB user name</description>
+</property>
+<property>
+ 	 <name>oozie.service.JPAService.jdbc.password</name>
+  	 <value>oozie</value>
+	 <description>DB user password</description>
+</property>
+<property>
+        <name>oozie.delete.runtime.dir.on.shutdown</name>
+        <value>true</value>
+        <description>If the runtime directory should be kept after Oozie shutdowns down.</description>
+</property>
+<property>
+        <name>oozie.service.PurgeService.older.than</name>
+        <value>1</value>
+        <description>Jobs older than this value, in days, will be purged by the PurgeService.</description>
+</property>
+<property>
+        <name>oozie.service.PurgeService.coord.older.than</name>
+        <value>1</value>
+</property>
+<property>
+        <name>oozie.service.PurgeService.bundle.older.than</name>
+        <value>1</value>
+</property>
+
+<property>
+        <name>oozie.service.PurgeService.purge.old.coord.action</name>
+        <value>false</value>
+</property>
+<property>
+        <name>oozie.service.PurgeService.purge.limit</name>
+        <value>10</value>
+</property>
+<property>
+        <name>oozie.service.PurgeService.purge.interval</name>
+        <value>3600</value>
+</property>
+</configuration>

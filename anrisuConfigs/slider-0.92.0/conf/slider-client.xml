@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Properties set here are picked up in the client.
+-->
+<configuration>
+<property>
+	<name>HADOOP_CONF_DIR</name>
+	<value>/usr/local/hadoop-2.7.3/etc/hadoop</value>
+</property>
+<property>
+    <name>hadoop.registry.zk.quorum</name>
+    <value>localhost:2181</value>
+  </property>
+    <property>
+      <name>slider.client.resource.origin</name>
+      <value>conf/slider-client.xml</value>
+    </property>
+    <property>
+      <name>slider.security.protocol.acl</name>
+      <value>*</value>
+    </property>
+    <property>
+      <name>slider.yarn.queue</name>
+      <value/>
+    </property>
+    <property>
+      <name>slider.yarn.queue.priority</name>
+      <value>1</value>
+    </property>
+    <property>
+      <name>slider.am.login.keytab.required</name>
+      <value>false</value>
+    </property>
+
+  <!--
+   The recommended approach is to configure slider-env.sh and set HADOOP_CONF_DIR.
+   Otherwise, appropriate configurations from hdfs-site, yarn-site, can be dropped in this file
+   for Slider client to work. The following list is not an exhaustive list but the minimal config
+   needed to interact with a non-secure cluster.
+  -->
+  <!--
+    <property>
+      <name>yarn.log-aggregation-enable</name>
+      <value>true</value>
+    </property>
+
+    <property>
+      <name>yarn.application.classpath</name>
+      <value>PROVIDE_CLASS_PATH_FROM_YARN</value>
+    </property>
+
+    <property>
+      <name>yarn.resourcemanager.address</name>
+      <value>@RM-ADDR</value>
+    </property>
+
+    <property>
+      <name>yarn.resourcemanager.scheduler.address</name>
+      <value>@RM-SCHEDULER-ADDR</value>
+    </property>
+
+    <property>
+      <name>fs.defaultFS</name>
+      <value>@FILESYSTEM</value>
+    </property>
+
+    <property>
+      <name>hadoop.registry.zk.quorum</name>
+      <value>@ZK-QUORUM</value>
+    </property>
+
+    <property>
+      <name>yarn.resourcemanager.principal</name>
+      <value>yarn/master@MINICLUSTER</value>
+    </property>
+
+    <property>
+      <name>dfs.namenode.kerberos.principal</name>
+      <value>hdfs/master@MINICLUSTER</value>
+    </property>
+  -->
+
+</configuration>
