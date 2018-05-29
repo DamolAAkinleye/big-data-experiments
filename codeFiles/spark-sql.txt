@@ -1,0 +1,1 @@
+val summary= trades.filter($"symbol"==="ABB" && $"symbol"==="AEA").groupBy($"symbol",year(to_date($"trdate")) as "year").agg(max(($"volume")) as "max",min($"volume") as "min");
