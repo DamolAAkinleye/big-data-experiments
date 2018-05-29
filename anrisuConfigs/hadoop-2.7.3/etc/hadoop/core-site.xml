@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+ <property>
+  <name>hadoop.tmp.dir</name>
+  <value>/tmp/hadoop-hduser/hadoop</value>
+ </property>
+ <property>
+  <name>fs.defaultFS</name>
+  <value>hdfs://localhost:54310</value>
+ </property>
+ <property>
+    <name>hadoop.proxyuser.hduser.hosts</name>
+    <value>localhost</value>
+ </property>
+ <property>
+    <name>hadoop.proxyuser.hduser.groups</name>
+    <value>hadoop</value>
+ </property>
+<property>
+  <name>hadoop.proxyuser.oozie.hosts</name>
+  <value>*</value>
+</property>
+<property>
+  <name>hadoop.proxyuser.oozie.groups</name>
+  <value>*</value>
+</property>
+<!--Alluxio Settings-->
+</configuration>
