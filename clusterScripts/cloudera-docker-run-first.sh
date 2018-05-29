@@ -1,0 +1,1 @@
+docker run --hostname=quickstart.cloudera --privileged=true -t -i --name=cloudera-on-docker -v "$HOME/Downloads:/home/cloudera/Downloads" -v "$HOME/Projects:/home/cloudera/Projects" -p 8888 cloudera/quickstart /usr/bin/docker-quickstart

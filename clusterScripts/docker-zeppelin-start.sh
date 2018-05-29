@@ -1,0 +1,1 @@
+docker run --net=anrisu-hadoop-network --ip=172.18.0.55 --hostname=zeppelin -i -t --name=ubuntu-zeppelin -v "$HOME/Downloads:/home/hduser/Downloads" -v "/app/docker-host/hduser/zeppelin:/app/hduser/zeppelin" apache/zeppelin:0.7.3
