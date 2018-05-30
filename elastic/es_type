@@ -1,0 +1,63 @@
+{
+	"transaction":{
+		"properties":{
+				"tran_id": {
+					"type":"integer"
+				},
+				"tran_dt": {
+					"type":"date","format":"yyyy-MM-dd HH:mm:ss"
+				},
+				"branch" : {
+					"type": "string"
+				},
+				"state" : {
+					"type": "string"
+				},
+				"location": {
+					"type":"geo_point"
+				}
+				"tran_typ": {
+					"type": "string"
+				},
+				"tran_amt": {
+					"type": "float"
+				}
+		}
+	}
+}
+
+
+{
+	"class" : {
+		"properties" : {
+			"title" : {
+				"type" : "string"
+			},
+			"professor" : {
+				"type" : "string"
+			},
+			"major" : {
+				"type" : "string"
+			},
+			"semester" : {
+				"type" : "string"
+			},
+			"student_count" : {
+				"type" : "integer"
+			},
+			"unit" : {
+				"type" : "integer"
+			},
+			"rating" : {
+				"type" : "integer"
+			},
+			"submit_date" : {
+				"type" : "date",
+				"format" : "yyyy-MM-dd"
+			},
+			"school_location" : {
+				"type" : "geo_point"
+			}
+		}
+	}
+}

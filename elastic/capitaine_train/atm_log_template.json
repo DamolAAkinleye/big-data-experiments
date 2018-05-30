@@ -1,0 +1,28 @@
+{
+    "index_patterns": "stations*",
+    "order":    0,
+    "settings": {
+    "number_of_shards": 1
+    },
+    "mappings": {
+        "doc": {
+            "properties": {
+                "location": { 
+                    "type": "geo_point"
+                } 
+            } 
+        } 
+    } ,
+	"dynamic_templates": [
+                    {
+                        "notanalyzed": {
+                            "match_mapping_type": "string",
+                            "mapping": {
+                                "index": "not_analyzed",
+                                "type": "keyword"
+                            },
+                            "match": "*"
+                        }
+                    }
+                ]
+}

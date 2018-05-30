@@ -1,0 +1,46 @@
+{
+  "index_patterns": "stations",
+  "order":    1,
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "doc": {
+      "dynamic_templates": [
+         {
+            "string_fields": {
+               "mapping": {
+-                  "index": "analyzed",
+                  "omit_norms": true,
+                  "type": "string",
+                  "fields": {
+                     "raw": {
+                        "index": "not_analyzed",
+                        "ignore_above": 256,
+                        "type": "string"
+                     }
+                  }
+               },
+               "match_mapping_type": "string",
+               "match": "*"
+            }
+         }, {
+            "boolean_fields": {
+               "mapping": {
+                  "type": "boolean"
+               },
+               "match": "*is_*"
+            }
+         }
+      ],
+      "_all": {
+        "enabled": false
+      },
+      "properties": {
+          "location": {
+          "type": "geo_point"
+        }
+      }
+    }
+  }
+}
